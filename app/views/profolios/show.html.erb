@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profolio.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @profolio.password %>
+</p>
+
+<p>
+  <strong>Stocks:</strong>
+  <%= @profolio.stocks %>
+</p>
+
+<%= link_to 'Edit', edit_profolio_path(@profolio) %> |
+<%= link_to 'Back', profolios_path %>

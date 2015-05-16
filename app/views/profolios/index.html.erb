@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Listing Profolios</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+      <th>Stocks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profolios.each do |profolio| %>
+      <tr>
+        <td><%= profolio.name %></td>
+        <td><%= profolio.password %></td>
+        <td><%= profolio.stocks %></td>
+        <td><%= link_to 'Show', profolio %></td>
+        <td><%= link_to 'Edit', edit_profolio_path(profolio) %></td>
+        <td><%= link_to 'Destroy', profolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profolio', new_profolio_path %>
